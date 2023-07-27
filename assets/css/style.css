@@ -1,0 +1,204 @@
+@import "normalize.css";
+
+/* variables */
+:root {
+    --primary-bg-color: rgba(174, 181, 185, 0.5);
+    --secondary-bg-color: rgba(76, 82, 85, 0.4);
+
+    --primary-color: #FFFFFF;
+    --secondary-color: rgba(255, 255, 255, 0.4);
+}
+
+/*  global    */
+
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+button {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+    border-radius: 0;
+    cursor: pointer;
+    appearance: none;
+}
+.app {
+    padding: 40px 90px 0;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(180deg, rgba(8, 15, 26, 0.59) 0%, rgba(17, 17, 46, 0.46) 100%);
+    background-color: rebeccapurple;
+}
+
+/*   header/control pamel */
+
+.header {}
+.control-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.settings {
+    display: flex;
+    gap: 10px;
+}
+.basic-button {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    background: var(--primary-bg-color);
+    transition: .2s;
+}
+.basic-button:hover {
+    color: var(--secondary-color);
+    background-color: var(--secondary-bg-color);
+}
+.change-img {
+    background-image: url("./../svg/refresh-button.svg");
+}
+.search-form {
+    display: flex;
+}
+.input-box {
+    position: relative;
+}
+.input-form {
+    height: 44px;
+    width: 274px;
+    padding: 13px 60px 13px 13px;
+    border: 1px solid rgba(228, 227, 227, 0.2);
+    border-radius: 5px 0 0 5px;
+    background: rgba(76, 82, 85, 0.4);
+    color: var(--primary-color);
+}
+.input-form::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    font-feature-settings: 'cpsp' on;
+    color: var(--primary-color);
+}
+.voice-input {
+    width: 44px;
+    height: 44px;
+    padding-top: 4px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.voice-input path {
+    fill: var(--secondary-color);
+    transition: .2s;
+}
+.voice-input:hover path {
+    fill: var(--primary-color);
+}
+.submit-button {
+    width: 100px;
+    border-radius: 0 5px 5px 0;
+}
+
+/*  content and map  */
+
+.container {
+    height: calc(100vh - 84px ); /* !!! костыль */
+    display: flex;
+    align-items: center;
+}
+.content {
+    width: 50%;
+    height: 600px;
+}
+.location {
+    margin-bottom: 4px;
+    font-size: 44px;
+    line-height: 54px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+.time-and-date {}
+.date, .time {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--primary-color);
+}
+.date {
+    margin-right: 18px;
+}
+.time {}
+.tamp-and-extended {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.temp {
+    position: relative;
+    display: inline-block;
+    font-size: 306px;
+    line-height: 373px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.temp-circle {
+    position: absolute;
+    top: 110px;
+    right: -25px;
+    font-size: 100px;
+    line-height: 0;
+}
+.extended {}
+.extended p, .extended span {
+    font-size: 22px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+.sky-meaning {}
+.feels {}
+.feels-meaning {}
+.wind {}
+.wind-meaning {}
+.humidity {}
+.humidity-meaning {}
+.next-days {
+    display: flex;
+    justify-content: space-between;
+}
+.placeholder-box {
+    width: 160px;
+    height: 107px;
+    background-color: darkgrey;
+}
+.map {
+    margin: auto 0 auto auto;
+    width: 375px;
+    height: 459px;
+    background-color: darkgrey;
+}
+
